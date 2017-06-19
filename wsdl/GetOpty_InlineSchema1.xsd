@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.siebel.com/xml/ATC%20Get%20Opty%20Data%20ContactSys" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://siebel.com/CustomUI" xmlns:xsdLocal1="http://www.siebel.com/xml/ATC%20Get%20Opty%20Data%20ContactSys">
+  <xsd:annotation>
+    <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="Oppty" type="xsdLocal1:Oppty"/>
+  <xsd:complexType name="OpptyTopElmt">
+    <xsd:sequence>
+      <xsd:element maxOccurs="1" minOccurs="1" name="Oppty" type="xsdLocal1:Oppty"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Oppty">
+    <xsd:sequence>
+      <xsd:element maxOccurs="1" minOccurs="0" name="Id" type="xsd:string"/>
+      <xsd:element maxOccurs="1" minOccurs="0" name="IntegrationId" type="xsd:string"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="Doc" type="xsdLocal1:Doc"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Doc">
+    <xsd:all>
+      <xsd:element maxOccurs="1" minOccurs="1" name="FileType" type="xsd:string"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="OpptyId" type="xsd:string"/>
+      <xsd:element maxOccurs="1" minOccurs="0" name="FileExt" type="xsd:string"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="FileName" type="xsd:string"/>
+      <xsd:element maxOccurs="1" minOccurs="0" name="FileBuffer" type="xsd:base64Binary"/>
+    </xsd:all>
+  </xsd:complexType>
+</xsd:schema>

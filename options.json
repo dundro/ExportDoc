@@ -1,0 +1,5 @@
+{
+    "Input_File_Path":"./Files/Input/Applications.txt",
+    "Output_Folder":"./Files/Output/",
+    "Service_Endpoint":"http://172.19.2.20/eai_rus/start.swe?SWEExtSource=WebService&amp;SWEExtCmd=Execute&amp;username=SADMIN&amp;password=SADMIN"
+}

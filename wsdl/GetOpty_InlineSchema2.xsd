@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://siebel.com/CustomUI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://siebel.com/CustomUI" xmlns:xsdLocal1="http://www.siebel.com/xml/ATC%20Get%20Opty%20Data%20ContactSys">
+  <xsd:import namespace="http://www.siebel.com/xml/ATC%20Get%20Opty%20Data%20ContactSys" schemaLocation="GetOpty_InlineSchema1.xsd"/>
+  <xsd:element ibmSchExtn:docRoot="true" name="getOptyData_Input">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="IntegrationId" type="xsd:string"/>
+        <xsd:element name="FileType" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element ibmSchExtn:docRoot="true" name="getOptyData_Output">
+    <xsd:complexType>
+      <xsd:all>
+        <xsd:element ref="xsdLocal1:Oppty" maxOccurs="1" minOccurs="0"/>
+        <xsd:element name="Result" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+      </xsd:all>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
